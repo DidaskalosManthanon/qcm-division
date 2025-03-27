@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QCM sur la divisibilité</title>
+    <link rel="stylesheet" href="styles.css">
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Comprendre et utiliser les notions de divisibilité et de nombres premiers (niveau 3<sup>ème</sup>)</h1>    
+    </header>
+    <main>
+        <section>
+            <article>
+                <h2>Ce que sait faire l'élève (voir les <a href="https://eduscol.education.fr/document/14068/download" target="_blank">attendus de fin d'année</a>)</h2>
+                <ul>
+                    <li id="CQSFE1">
+                        Il décompose un nombre entier en produit de facteurs premiers 
+                        (à la main, à l’aide d’un tableur ou d’un logiciel de programmation).
+                        <a href="#MEO1">mise en oeuvre concrète.</a>
+                    </li>
+                    <li id="CQSFE2">
+                        Il simplifie une fraction pour la rendre irréductible.
+                        <a href="#MEO2">mise en oeuvre concrète.</a>
+                    </li>
+                    <li id="CQSFE3">
+                        Il modélise et résout des problèmes mettant en jeu la divisibilité 
+                        (engrenages, conjonction de phénomènes…).
+                        <a href="#MEO3">mise en oeuvre</a>
+                    </li>
+                </ul>
+            </article>
+            <article>
+                <h2>Exemples de réussite</h2>
+                <ul>
+                    <li>
+                        Il décompose en produit de facteurs premiers 
+                        (à la main, à l’aide d’un tableur ou d’un logiciel de programmation) 
+                        les entiers naturels suivants : 306 ; 124 ; 2 220. 
+                    </li>
+                    <li>
+                        Il rend irréductibles les fractions suivantes : 
+                        \(\dfrac{66}{30} ; \dfrac{12}{51}\) (en question flash).
+                    </li>
+                    <li>
+                        Il rend irréductibles les fractions suivantes :
+                        \(\dfrac{140}{340} ; \dfrac{7140}{2310}\)
+                    </li>
+                    <li>
+                        Deux ampoules clignotent. L’une s’allume toutes les 153 secondes et 
+                        l’autre toutes les 187 secondes. À minuit, elles s’allument ensemble.
+                        Détermine l’heure à laquelle elles s’allumeront de nouveau ensemble.
+                    </li>
+                </ul>
+            </article>
+        </section>
+        <section id="yourgame">
+            <h2>À vous de jouer</h2>
+            
+            <article>
+                <h3 id="MEO1">Décomposition d'un nombre entier en produit de facteurs premiers <a href="#CQSFE1">(revoir les attendus)</a></h3>
+                <ol start="1">
+                    <li class="question" data-points="2" data-type="checkbox">
+                        <p>
+                            Quelle est la décomposition en produit de facteurs premiers du 
+                            nombre 360 ?
+                        </p>
+                        <ol class="resp">
+                            <li>
+                                <input type="checkbox" id="q1r1"><label for="q1r1">\(36\times 10\)</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="q1r2"><label for="q1r2">\(4\times 9\times 10\)</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="q1r3" data-correct><label for="q1r3">\(2^3\times 3^2\times 5\)</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="q1r4" data-correct><label for="q1r4">\(2\times 2\times 2\times 3\times 3\times 5\)</label>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="question" data-points="1" data-type="radio">
+                        <p>
+                            Quelle est la décomposition en produit de facteurs premiers du nombre 2310 ?
+                        </p>
+                        <ol class="resp">
+                            <li>
+                                <input type="radio" id="q2r1"><label for="q2r1">\(23\times 10\)</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q2r2"><label for="q2r2">\(23\times 100\)</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q2r21"><label for="q2r3">\(2^7\times 19\)</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q2r4" data-correct><label for="q2r4">\(2\times 3\times 5\times 7\times 11\)</label>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="question" data-points="2" data-type="checkbox">
+                        <p>
+                            Quelle est la décomposition en produit de facteurs premiers du 
+                            nombre 108 ?
+                        </p>
+                        <ol class="resp">
+                            <li>
+                                <input type="checkbox" id="q3r1"><label for="q3r1">\(8\times 9\)</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="q3r2"><label for="q3r2">\(2^3\times 3^2\)</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="q3r3" data-correct><label for="q3r3">\(2^2\times 3^3\)</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="q3r4" data-correct><label for="q3r4">\(2\times 2\times 3\times 3\times 3\)</label>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </article>
+            <article>
+                <h3 id="MEO2">Rendre une fraction irréductible <a href="#CQSFE2">(revoir les attendus)</a></h3>
+                <ol start="4">
+                    <li class="question" data-points="1" data-type="radio">
+                        <p>
+                            Quelle est la forme irréductible de la fraction \(\dfrac{66}{30}\) ?
+                        </p>
+                        <ol class="resp">
+                            <li>
+                                <input type="radio" id="q4r1"><label for="q4r1">\(\dfrac{11}{3}\)</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q4r2"><label for="q4r2">\(\dfrac{11}{2}\)</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q4r3" data-correct><label for="q4r3">\(\dfrac{11}{5}\)</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q4r4"><label for="q4r4">\(\dfrac{11}{7}\)</label>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="question" data-points="1" data-type="radio">
+                        <p>
+                            Quelle est la forme irréductible de la fraction \(\dfrac{12}{51}\) ?
+                        </p>
+                        <ol class="resp">
+                            <li>
+                                <input type="radio" id="q5r1" data-correct><label for="q5r1">\(\dfrac{4}{17}\)</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q5r2"><label for="q5r2">\(\dfrac{4}{3}\)</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q5r3"><label for="q5r3">\(\dfrac{3}{17}\)</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q5r4"><label for="q5r4">\(\dfrac{3}{4}\)</label>
+                            </li>
+                        </ol>
+                
+                    </li>
+                    <li class="question" data-points="1" data-type="radio">
+                        <p>
+                           Quelle est la forme irréductible de la fraction \(\dfrac{140}{340}\) ?
+                        </p>
+                        <ol class="resp">
+                            <li>
+                                <input type="radio" id="q6r1"><label for="q6r1">\(\dfrac{70}{170}\)</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q6r2"><label for="q6r2">\(\dfrac{14}{34}\)</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q6r3"><label for="q6r3">\(\dfrac{2^2\times 5\times 7}{2^2\times 5\times 17}\)</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q6r4" data-correct><label for="q6r4">\(\dfrac{7}{17}\)</label>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="question" data-points="1" data-type="radio">
+                        <p>
+                           Quelle est la forme irréductible de la fraction \(\dfrac{7140}{2310}\) ?
+                        </p>
+                        <ol class="resp">
+                            <li>
+                                <input type="radio" id="q7r1"><label for="q7r1">\(\dfrac{714}{231}\)</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q7r2"><label for="q7r2">\(\dfrac{6570}{1155}\)</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q7r3"><label for="q7r3">\(\dfrac{2^2\times 3\times 5\times 7\times 17}{2\times 3\times 5\times 7\times 11}\)</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q7r4" data-correct><label for="q7r4">\(\dfrac{34}{11}\)</label>
+                            </li>
+                        </ol>
+                    </li>
+                </ol>
+            </article>
+            <article>
+                <h3 id="MEO3">Problèmes mettant en jeu la divisibilité  <a href="#CQSFE3">(revoir les attendus)</a></h3>
+                <ol start="8">
+                    <li class="question" data-points="1" data-type="radio">
+                        <p>
+                            Deux ampoules clignotent. L’une s’allume toutes les 153 secondes et 
+                            l’autre toutes les 187 secondes. À minuit, elles s’allument ensemble.
+                            Détermine l’heure à laquelle elles s’allumeront de nouveau ensemble.
+                        </p>
+                        <ol class="resp">
+                            <li>
+                                <input type="radio" id="q8r1" data-correct><label for="q8r1">00:28:03 (HH:MM:SS)</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q8r2"><label for="q8r2">00:11:00 (HH:MM:SS)</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q8r3"><label for="q8r3">01:11:00 (HH:MM:SS)</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q8r4"><label for="q8r4">01:28:03 (HH:MM:SS)</label>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="question" data-points="1" data-type="radio">
+                        <p>
+                            Un bus passe toutes les 12 minutes, un autre toutes les 18 minutes. 
+                            S’ils partent ensemble à 6h, à quelle heure se croiseront-ils à 
+                            nouveau ?
+                        </p>
+                        <ol class="resp">
+                            <li>
+                                <input type="radio" id="q9r1"><label for="q9r1">06h30</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q9r2"><label for="q9r2">07h36</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q9r3" data-correct><label for="q9r3">6h36</label>
+                            </li>
+                            <li>
+                                <input type="radio" id="q9r4"><label for="q9r4">8h30</label>
+                            </li>
+                        </ol>
+                    </li>
+                    <li class="question" data-points="2" data-type="checkbox">
+                        <p>
+                            Une documentaliste du CDI souhaite ranger 168 livres de maths
+                            120 livres d'anglais sur des étagères. Elle veut que chaque 
+                            étagère contienne le même nombre de livres d'anglais et le 
+                            même nombre de livres de maths. 
+                            Quel est le nombre maximal d'étagères qu'il peut utiliser ? 
+                            Combien de livres de chaque type y aura-t-il sur chaque étagère ?
+                        </p>
+                        <ol class="resp">
+                            <li>
+                                <input type="checkbox" id="q10r1"><label for="q10r1">7 étagères et 24 livres par étagères</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="q10r2" data-correct><label for="q10r2">24 étagères</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="q10r3"><label for="q10r3">7 livres d'anglais et 5 livres de maths</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="q10r4" data-correct><label for="q10r4">5 livres d'anglais et 7 livres de maths</label>
+                            </li>
+                        </ol>
+                    </li>
+            </article>
+
+        </section>
+
+        <button id="submit-btn">Envoyer</button>
+        <div id="score-details">
+            <p id="score-display"></p>
+            <ul id="question-points"></ul>
+        </div>
+
+    </main>
+    <footer>
+        <p>📚 Envie de progresser en maths ? Voir mon annonce sur <a href="https://www.superprof.fr/reussissez-maths-niveau-etudes-esprit.html" target="_blank">superprof</a></p>
+        <ul>
+            <li>
+                <a href="https://didaskalosmanthanon.github.io/image-fonction-affine/index.html" target="_blank">Calcul de l'image d'un nombre par une fonction affine</a>
+            </li>
+            <li>
+                <a href="https://didaskalosmanthanon.github.io/antecedent-fonction-affine/index.html" target="_blank">Antécédent d'un nombre par une fonction affine</a>
+            </li>
+            <li>
+                <a href="https://didaskalosmanthanon.github.io/quizz/index.html" target="_blank">QCMs de mathématiques (niveau 3<sup>ème</sup> - 2<sup>de</sup>)</a>
+            </li>
+            <li>
+                <a href="https://didaskalosmanthanon.github.io/quizz-stats-3eme/index.html" target="_blank">QCMs de stats (niveau 3<sup>ème</sup> - 2<sup>de</sup>)</a>
+            </li>
+            <li>
+                <a href="https://didaskalosmanthanon.github.io/quizz-fonctions-3eme/index.html" target="_blank">QCMs sur les fonctions</a>
+             </li>
+            <li>
+                <a href="https://didaskalosmanthanon.github.io/geometry/index.html" target="_blank">Exercices de géométrie (niveau 3<sup>ème</sup> - 2<sup>de</sup>)</a>
+             </li>
+             <li>
+                <a href="https://didaskalosmanthanon.github.io/testimonial-slider/index.html" target="_blank">Ce que mes élèves pensent de mes cours de maths</a>
+             </li>
+        </ul>
+        <p>Pour entrer en contact remplissez ce <a href="https://forms.gle/mcZ5uMv1BjynrWrz9" target="_blank">formulaire</a></p>
+        <p>&copy; 2025 - <strong>Didaskalos Manthanon</strong>, <em>Apprenez à devenir un maître apprenant</em></p>
+        
+      </footer>
+
+      <script src="script.js"></script>
+</body>
+
+</html>
